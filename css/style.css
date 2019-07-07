@@ -1,0 +1,199 @@
+/* general styling */
+* {
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Chakra Petch', sans-serif;
+    background-color: black;
+}
+
+/* navigation */
+
+.navigation {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: fixed;
+}
+
+.navigation-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    flex: 1 1 1;
+}
+
+.navigation-link {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: rgb(105, 200, 200);
+    text-shadow: .1rem -.05rem .8rem rgb(9, 9, 41);
+    letter-spacing: .3rem;
+    font-weight: bold;
+    transition: all .4s;
+}
+
+.navigation-link:hover {
+    padding: .5rem;
+    background: linear-gradient(to right, aqua, blue, black);
+    border-radius: 3rem;
+    box-shadow: .05rem .4rem .3rem rgb(0, 0, 0);
+    transform: translate(0, 2) scale(1.5, 1.5);
+}
+
+.navigation-link:active {
+    box-shadow: 0;
+    padding: .3rem;
+}
+
+/* header */
+
+.header {
+    background: linear-gradient(to right bottom, rgba(74, 173, 173, 0.561), rgba(0, 0, 0, 0.712), rgba(136, 32, 32, 0.589), rgba(0, 0, 0, 0.712), rgba(14, 14, 116, 0.561)), url(/img/apexbackground.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.heading-title {
+    position: absolute;
+    top: 20%;
+    font-size: 10rem;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
+    text-shadow: .1rem .3rem 1rem rgb(24, 14, 114);
+    color: rgb(26, 136, 99);
+    left: 27%;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+}
+
+.heading-text {
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    font-size: 5rem;
+    color: rgb(17, 131, 116);
+    text-shadow: .1rem .1rem .5rem rgb(38, 174, 207);
+    letter-spacing: .2rem;
+}
+
+/* legends */
+
+.legends {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.692), rgba(0, 255, 255, 0.685), rgba(0, 0, 255, 0.575), rgba(0, 0, 0, 0.815)), url(/img/apexlegendsbackground.jpg);
+    background-size: cover;
+}
+
+.legends-title {
+    position: absolute;
+    left: 48%;
+    top: 105%;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-shadow: .1rem .1rem .5rem black;
+    color: darkblue;
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 255, 255, 0.596), rgba(173, 216, 230, 0.616), rgba(255, 255, 255, 0.63), rgba(0, 0, 139, 0.609), rgb(0, 0, 0));
+    padding: .5rem;
+    border-radius: 1.5rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 1;
+    justify-content: space-evenly;
+}
+
+.card {
+    height: 48rem;
+    position: relative;
+    margin-top: 30rem;
+    width: 50rem;
+    box-shadow: .1rem .7rem .5rem black;
+    background: rgba(0, 0, 0, 0.719);
+    transition: all .5s;
+}
+
+.card-picture {
+    width: 25rem;
+    position: relative;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    box-shadow: .05rem .8rem .5rem black;
+    left: 25%;
+    background-size: cover;
+}
+
+.card-title {
+    font-size: 2rem;
+    text-shadow: .1rem .5rem 1rem white;
+    left: 40%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
+    position: relative;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    text-shadow: .1rem .3rem 1rem rgb(255, 255, 255);
+    text-transform: uppercase;
+    padding: 0 .4rem;
+    color: rgb(0, 0, 0);
+    letter-spacing: .3rem;
+    text-align-last: center;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
+    line-height: 1.5rem;
+}
+
+.card:hover {
+    box-shadow: .05rem -.02rem 2rem black;
+    transform: translate(.4rem, -2rem) scale(1, 1);
+    background: linear-gradient(to bottom right, rgba(218, 178, 104, 0.596), rgba(172, 107, 4, 0.575),
+            rgba(77, 11, 5, 0.705))
+}
+
+.pros {
+    height: 100vh;
+    background: linear-gradient(to top left, rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.216), rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.63)), url(/img/prosbackground.jpg);
+    background-size: cover;
+}
+
+.pros-title {
+    position: absolute;
+    left: 48%;
+    top: 205%;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-shadow: .1rem .1rem .5rem black;
+    color: darkblue;
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 255, 255, 0.596), rgba(173, 216, 230, 0.616), rgba(255, 255, 255, 0.63), rgba(0, 0, 139, 0.609), rgb(0, 0, 0));
+    padding: .5rem;
+    border-radius: 1.5rem;
+}
+
+@media (max-width: 1595px) {
+    .header, .pros, .legends {
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+    }
+}
