@@ -61,8 +61,11 @@ body {
 
 .header {
     background: linear-gradient(to right bottom, rgba(74, 173, 173, 0.561), rgba(0, 0, 0, 0.712), rgba(136, 32, 32, 0.589), rgba(0, 0, 0, 0.712), rgba(14, 14, 116, 0.561)), url(/img/apexbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     height: 100vh;
-    background-size: cover;
+    margin: 3px auto 0;
+    position: relative;
 }
 
 .heading-title {
@@ -91,15 +94,19 @@ body {
 /* legends */
 
 .legends {
-    height: 100vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.692), rgba(0, 255, 255, 0.685), rgba(0, 0, 255, 0.575), rgba(0, 0, 0, 0.815)), url(/img/apexlegendsbackground.jpg);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    margin: 3px auto 0;
+    position: relative;
+
 }
 
 .legends-title {
     position: absolute;
     left: 48%;
-    top: 105%;
+    top: 10%;
     letter-spacing: .3rem;
     text-transform: uppercase;
     font-size: 2rem;
@@ -109,6 +116,8 @@ body {
     padding: .5rem;
     border-radius: 1.5rem;
 }
+
+/* cards */
 
 .cards {
     display: flex;
@@ -169,16 +178,21 @@ body {
             rgba(77, 11, 5, 0.705))
 }
 
+/* pros */
+
 .pros {
-    height: 100vh;
     background: linear-gradient(to top left, rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.216), rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.63)), url(/img/prosbackground.jpg);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    margin: 3px auto 0;
+    position: relative;
 }
 
 .pros-title {
     position: absolute;
     left: 48%;
-    top: 205%;
+    top: 20%;
     letter-spacing: .3rem;
     text-transform: uppercase;
     font-size: 2rem;
@@ -189,11 +203,214 @@ body {
     border-radius: 1.5rem;
 }
 
-@media (max-width: 1595px) {
-    .header, .pros, .legends {
-        background-size: cover;
-        height: 100vh;
-        width: 100%;
-        margin: 0;
+/* responsiveness */
+
+@media (max-width: 1500px) {
+    .heading-title {
+        left: 28%;
+        font-size: 7rem;
     }
+
+    .heading-text {
+        font-size: 4.5rem;
+        left: 38%;
+    }
+} 
+
+@media (max-width: 1200px) {
+    .heading-title {
+        font-size: 5rem;
+        left: 30%;
+    }
+
+    .heading-text {
+        font-size: 3rem;
+        left: 40%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .heading-title {
+        font-size: 4rem;
+        left: 33%;
+    }
+
+    .heading-text {
+        font-size: 2.5rem;
+        left: 42%;
+    }
+
+    .pros-title {
+        position: absolute;
+        left: 46%;
+        top: 17%;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+        font-size: 2rem;
+        text-shadow: .1rem .1rem .5rem black;
+        color: darkblue;
+        background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 255, 255, 0.596), rgba(173, 216, 230, 0.616), rgba(255, 255, 255, 0.63), rgba(0, 0, 139, 0.609), rgb(0, 0, 0));
+        padding: .5rem;
+        border-radius: 1.5rem;
+    }
+
+    .legends-title {
+        position: absolute;
+        left: 45%;
+        top: 7%;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+        font-size: 2rem;
+        text-shadow: .1rem .1rem .5rem black;
+        color: darkblue;
+        background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 255, 255, 0.596), rgba(173, 216, 230, 0.616), rgba(255, 255, 255, 0.63), rgba(0, 0, 139, 0.609), rgb(0, 0, 0));
+        padding: .5rem;
+        border-radius: 1.5rem;
+    }
+
+    .card {
+        height: 40rem;
+        position: relative;
+        margin-top: 25rem;
+        width: 30rem;
+        box-shadow: .1rem .7rem .5rem black;
+        background: rgba(0, 0, 0, 0.719);
+        transition: all .5s;
+    }
+    
+    .card-picture {
+        width: 15rem;
+        position: relative;
+        margin-top: 1rem;
+        border-radius: 1.5rem;
+        box-shadow: .05rem .8rem .5rem black;
+        left: 26%;
+        background-size: cover;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+        text-shadow: .1rem .5rem 1rem white;
+        left: 39%;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: "Orbitron", sans-serif;
+        position: relative;
+    }
+    
+    .card-text {
+        font-size: .8rem;
+        text-shadow: .1rem .3rem 1rem rgb(255, 255, 255);
+        text-transform: uppercase;
+        padding: 0 .4rem;
+        color: rgb(0, 0, 0);
+        letter-spacing: .3rem;
+        text-align-last: center;
+        text-align: center;
+        font-weight: bold;
+        font-family: "Orbitron", sans-serif;
+        line-height: 1.3rem;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .heading-title {
+        font-size: 2.5rem;
+        left: 33%;
+    }
+
+    .heading-text {
+        font-size: 1.6rem;
+        left: 43%;
+    }
+
+    .pros-title {
+        position: absolute;
+        left: 45%;
+        top: 93%;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+        font-size: 2rem;
+        text-shadow: .1rem .1rem .5rem black;
+        color: darkblue;
+        background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 255, 255, 0.596), rgba(173, 216, 230, 0.616), rgba(255, 255, 255, 0.63), rgba(0, 0, 139, 0.609), rgb(0, 0, 0));
+        padding: .5rem;
+        border-radius: 1.5rem;
+    }
+
+    .legends-title {
+        position: absolute;
+        left: 41%;
+        top: 20%;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+        font-size: 2rem;
+        text-shadow: .1rem .1rem .5rem black;
+        color: darkblue;
+        background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 255, 255, 0.596), rgba(173, 216, 230, 0.616), rgba(255, 255, 255, 0.63), rgba(0, 0, 139, 0.609), rgb(0, 0, 0));
+        padding: .5rem;
+        border-radius: 1.5rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    .card {
+        height: 40rem;
+        position: relative;
+        margin-top: 20rem 0 30rem 0;
+        width: 25rem;
+        box-shadow: .1rem .7rem .5rem black;
+        background: rgba(0, 0, 0, 0.719);
+        transition: all .5s;
+        z-index: 1;
+    }
+
+    .pros .card:nth-child(1) {
+        margin-top: 90rem;
+    }
+
+    .pros .card:nth-child(2) {
+        margin-bottom: 15rem;
+    }
+    
+    .card-picture {
+        width: 15rem;
+        position: relative;
+        margin-top: 1rem;
+        border-radius: 1.5rem;
+        box-shadow: .05rem .8rem .5rem black;
+        left: 26%;
+        background-size: cover;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+        text-shadow: .1rem .5rem 1rem white;
+        left: 39%;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: "Orbitron", sans-serif;
+        position: relative;
+    }
+    
+    .card-text {
+        font-size: .5rem;
+        text-shadow: .1rem .3rem 1rem rgb(255, 255, 255);
+        text-transform: uppercase;
+        padding: 0 .4rem;
+        color: rgb(0, 0, 0);
+        letter-spacing: .3rem;
+        text-align-last: center;
+        text-align: center;
+        font-weight: bold;
+        font-family: "Orbitron", sans-serif;
+        line-height: 1.3rem;
+    }
+
 }
